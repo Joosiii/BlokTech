@@ -10,6 +10,6 @@ Een matching app voor mensen met huisdieren, waarin je een profiel kan aanmaken 
 ## Feature
 Het aanmaken van een profiel voor je huisdier in combinatie met een persoonlijk profiel. 
 
-----------------------
+
 Lees verder in de Wiki
-----------------------
+
