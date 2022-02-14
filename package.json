@@ -7,7 +7,7 @@
   "name": "back-end",
   "version": "1.0.0",
   "description": "Back end van Joost",
-  "main": "helloworld.js",
+  "main": "index.js",
   "scripts": {
     "test": "camelcase index.js",
     "precompress": "{{ executes BEFORE the `compress` script }}",
