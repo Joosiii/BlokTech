@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #b9ceff;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    width: 75%;
+    margin: auto;
+}
+
+
+
+
+header {
+    text-align: center;
+    background-color: #253355;
+    padding: 1em 0;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+header img {
+    height: 30px;
+}
+
+
+
+
+
+
+nav {
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0.75em 0;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul img {
+    max-height: 35px;
+    max-width: 35px;
+    opacity: 0.25;
+}
+
+nav .active img {
+    opacity: 1;
+}
+
+nav a:hover img {
+    opacity: 1;
+}
+
+
+
+
+
+h1 {
+    font-weight: 900;
+    font-size: 30px;
+    margin-top: 0.75em;
+    color: #253355;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.75em;
+}
+
+label,
+p {
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+input[type=text] {
+    width: 100%;
+    background-color: white;
+    border: none;
+    border-radius: 40px;
+    margin-bottom: 1em;
+    padding: 0.75em 0;
+}
+
+textarea {
+    width: 100%;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    margin-bottom: 1em;
+    padding: 0.5em 0;
+}
+
+#pics {
+    display: flex;
+    justify-content: space-between;
+}
+
+img {
+    max-width: 90px;
+}
+
+input[type=submit] {
+    margin: auto;
+    margin-top: 1em;
+    width: 60%;
+    padding: 1em 2em;
+    background-color: #a50407;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}

@@ -2,7 +2,8 @@
   "dependencies": {
     "camelcase": "^6.3.0",
     "date-fns": "^2.28.0",
-    "server": "^1.0.37"
+    "server": "^1.0.37",
+    "slug": "^5.2.0"
   },
   "name": "back-end",
   "version": "1.0.0",
