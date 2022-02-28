@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dating App Profile Page</title>
+</head>
+<body>
+    <header>
+		<a href="index.html"><img src="images/logowhite.png" alt=""></a>
+	</header>
+    <nav>
+		<ul>
+			<li><a class="active" href="index.html"><img src="images/icon_home.png" alt=""></a></li>
+			<li><a href=""><img src="images/icon_profile.png" alt=""></a></li>
+		</ul>
+	</nav>
+    <main>
+        <h1>Edit Profile</h1>
+        <form>
+            <label for="naam">Naam</label>
+            <input type="text" id="naam" name="naam">
+            <label for="leeftijd">Leeftijd</label>
+            <input type="text" id="leeftijd" name="leeftijd">
+            <label for="bio">Profiel Biografie</label>
+            <textarea name="bio" id="bio" cols="30" rows="5"></textarea>
+            <label for="interesses">Interesses</label>
+            <input type="text" id="interesses" name="interesses">
+        </form>
+        <p>Foto's</p>
+        <div id="pics"><img src="images/pic1.png" alt="pic1">
+        <img src="images/defaultpic.png" alt="pic2">
+        <img src="images/defaultpic.png" alt="pic3"></div>
+        <form>
+            <input type="submit" value="Opslaan">
+        </form>
+    </main>
+</body>
+</html>
