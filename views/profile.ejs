@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('includes/head'); -%>
+</head>
+
+<body>
+    <%- include('includes/header'); -%>
+
+    <%- include('includes/nav'); -%>
+
+    <main>
+        <div id="profilepreview">
+            <img id="previewpic" src="images/prevpic1.png" alt="">
+
+            <h2><%= name %></h2>
+            <h3><%= age %> years old</h3>
+            <p><%= bio %></p>
+            <ul>
+                <% interests.forEach(function(item){ %>
+                    <li><%= item %></li>
+                    <% }) %>
+            </ul>
+        </div>
+
+        <button type="button" onclick="location.href='/edit'">Edit Profile</button>
+    </main>
+</body>
+
+</html>
