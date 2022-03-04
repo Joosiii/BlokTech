@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('includes/head'); -%>
+</head>
+
+<body>
+    <%- include('includes/header'); -%>
+
+    <%- include('includes/nav'); -%>
+
+    <main>
+        <h1>Edit Profile</h1>
+        <form>
+            <label for="naam">Name</label>
+            <input type="text" id="naam" name="naam">
+            <label for="leeftijd">Age</label>
+            <input type="text" id="leeftijd" name="leeftijd">
+            <label for="bio">Profile Biography</label>
+            <textarea name="bio" id="bio" cols="30" rows="5"></textarea>
+            <label for="interesses">Interests</label>
+            <input type="text" id="interesses" name="interesses">
+        </form>
+        <p>Pictures</p>
+        <div id="pics"><img src="images/pic1.png" alt="pic1">
+        <img src="images/defaultpic.png" alt="pic2">
+        <img src="images/defaultpic.png" alt="pic3"></div>
+        <form action="/profile">
+            <input type="submit" value="Opslaan">
+        </form>
+    </main>
+</body>
+
+</html>
