@@ -11,21 +11,36 @@
     <%- include('includes/nav'); -%>
 
     <main>
-        <div id="profilepreview">
+        <div id="profilenav">
+            <a id="hprof" href="#" onclick="HumanProfile();return false"><img src="images/icon_human.png" alt=""></a>
+            <a id="aprof" href="#" onclick="AnimalProfile();return false"><img src="images/icon_animal.png" alt=""></a>
+        </div>
+        <div id="humanprofile">
             <img id="previewpic" src="images/prevpic1.png" alt="">
 
-            <h2><%= name %></h2>
-            <h3><%= age %> years old</h3>
-            <p><%= bio %></p>
+            <h2><%= profiles.name %></h2>
+            <h3><%= profiles.age %> years old</h3>
+            <p><%= profiles.bio %></p>
             <ul>
-                <% interests.forEach(function(item){ %>
+                <% profiles.interests.forEach(function(item){ %>
                     <li><%= item %></li>
                     <% }) %>
             </ul>
         </div>
+        <div id="animalprofile">
+            <img id="previewpic_a" src="images/prevpic2.png" alt="">
+
+            <h2><%= profiles.name_a %></h2>
+            <h3><%= profiles.age_a %> years old</h3>
+            <p><%= profiles.type_a %></p>  
+            <p><%= profiles.breed_a %></p>  
+            <p><%= profiles.bio_a %></p>        
+        </div>
 
         <button type="button" onclick="location.href='/edit'">Edit Profile</button>
     </main>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
