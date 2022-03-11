@@ -33,6 +33,12 @@ header img {
 
 
 
+header,
+nav {
+    position: sticky;
+}
+
+
 
 
 
@@ -74,35 +80,64 @@ h1 {
 
 
 
-#profilepreview {
+#profilenav,
+#profilenave {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+#profilenav a,
+#profilenave a {
+    padding: 0 1em;
+}
+
+#profilenav img,
+#profilenave img {
+    max-height: 25px;
+}
+
+#humanprofile,
+#animalprofile {
     margin: auto;
     max-width: 292.5px;
     background-color: white;
-    margin-top: 2em;
+    margin-top: 1em;
     border-radius: 40px;
     padding-bottom: 2em;
 }
 
-#previewpic {
+#previewpic,
+#previewpic_a {
     display: block;
     max-width: 292.5px;
     margin: auto;
     padding: 0 0 1em 0;
 }
 
-#profilepreview h2 {
+#humanprofile h2,
+#animalprofile h2 {
     margin-left: 20px;
     font-size: 30px;
 }
 
-#profilepreview h3 {
+#humanprofile h3,
+#animalprofile h3 {
     margin-left: 20px;
     margin-top: 0.25em;
     font-style: italic;
     font-weight: 300;
 }
 
-#profilepreview p {
+#animalprofile p {
+    margin: 0 20px;
+    margin-top: 1em;
+    padding-top: 0.75em;
+    font-weight: 300;
+}
+
+#humanprofile p,
+#animalprofile p:first-of-type {
     margin: 0 20px;
     margin-top: 1em;
     padding-top: 0.75em;
@@ -110,7 +145,7 @@ h1 {
     border-top: 1px solid black;
 }
 
-#profilepreview ul {
+#humanprofile ul {
     margin: 0 20px;
     margin-top: 1em;
     list-style: none;
@@ -119,7 +154,7 @@ h1 {
     gap: 0.5em;
 }
 
-#profilepreview li {
+#humanprofile li {
     padding: 0.5em;
     background-color: rgb(220, 220, 220);
     font-size: 12px;
@@ -131,7 +166,7 @@ h1 {
 button {
     display: block;
     margin: auto;
-    margin-top: 2em;
+    margin-top: 1.5em;
     width: 60%;
     padding: 1em 2em;
     background-color: #a50407;
@@ -150,10 +185,12 @@ form {
     display: flex;
     flex-direction: column;
     margin-top: 0.75em;
+    margin-bottom: 6em;
 }
 
 label,
-form p {
+form p,
+p {
     margin-bottom: 0.5em;
     font-weight: 700;
 }
@@ -164,7 +201,8 @@ input[type=text] {
     border: none;
     border-radius: 40px;
     margin-bottom: 1em;
-    padding: 0.75em 0;
+    padding: 0.75em 1em;
+    font-family: 'Roboto', sans-serif;
 }
 
 textarea {
@@ -173,7 +211,37 @@ textarea {
     border: none;
     border-radius: 25px;
     margin-bottom: 1em;
-    padding: 0.5em 0;
+    padding: 0.5em 1em;
+    font-family: 'Roboto',
+        sans-serif;
+}
+
+#int-list {
+    height: 100px;
+    overflow: auto;
+    margin-bottom: 1em;
+}
+
+fieldset {
+    padding: 0.5em 1em;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+}
+
+legend {
+    float: left;
+    width: 100%;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+input[type=checkbox] {
+    margin-right: 0.5em;
+}
+
+fieldset label {
+    font-weight: 400;
 }
 
 #pics {
@@ -183,6 +251,7 @@ textarea {
 
 img {
     max-width: 90px;
+    border-radius: 25px;
 }
 
 input[type=submit] {
