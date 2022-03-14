@@ -1,8 +1,5 @@
+![](https://github.com/Joosiii/BlokTech/GitHubBanner.png)
 # Welkom op mijn Blok Tech Repository
-
-#### Joost Verweijen
-#### Klas Tech-3
-#### 500858940
 
 Zoals hierboven te zien is mijn naam Joost Verweijen, en dit blok volg ik het keuzeproject genaamd 'Project Tech', welke helemaal in het teken staat van een diepere duik nemen in het technische wereldje zoals wij die tegenwoordig kennen. Één opdracht staat deze paar weken centraal; het maken van een matching-applicatie, waarin we eerst individueel één bepaalde feature uit gaan werken, en vervolgens in groepsverband een volledige applicatie in elkaar gaan zetten. In dit blok verdiepen wij ons verder in Front-end Developement, en gaan we ook voor het eerst aan de slag met de Back-end Developement van een applicatie. Dit komt vervolgens samen in Blok Tech, wat ook een vak op zich is, waarin we leren over hoe wij het beste onze applicatie en het onderzoek eromheen kunnen laten zien aan het publiek, door middel van uiteraard de website waar u zich nu op bevindt; GitHub.
 
