@@ -29,6 +29,7 @@ node app.js
 U krijgt een alert dat de app gehost wordt binnen uw lokale systeem, in dit geval op portnummer 4000. Dit nummer kunt u ten alle tijde wijzigen door de `const port = 4000;` te wijzigen bovenin het app.js bestand.
 
 Om gebruik te maken van de MongoDB database heeft u een eigen .env file nodig waarin u uw eigen gegevens invult. Om te kijken hoe dit moet kunt u de code binnen [VOORBEELDenv](https://github.com/Joosiii/BlokTech/blob/master/VOORBEELDenv) kopiëren en personaliseren binnen uw eigen file.
+
 De structuur van een document binnen mijn database ziet er als volgende uit:
 ```
   {
