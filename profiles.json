@@ -1,13 +1,24 @@
 [
     {
+        "name": "",
+        "age": "",
+        "bio": "",
+        "interests": "",
+        "name_a": "",
+        "age_a": "",
+        "type_a": "",
+        "breed_a": "",
+        "bio_a": ""
+    },
+    {
         "name": "Hans",
-        "age": "27",
-        "bio": "Just an adventurous, spontaneous guy looking for an animal-loving match!",
-        "interests": ["Travel", "Dogs", "Cooking", "Surfing", "Politics"],
+        "age": "28",
+        "bio": "Spontaneous and adventurous guy looking for a match!",
+        "interests": ["Travel", "Dogs", "Cooking", "Politics", "Fitness"],
         "name_a": "Bello",
         "age_a": "4",
         "type_a": "Dog",
         "breed_a": "Golden Retriever",
-        "bio_a": "Always happy and energetic, open to play with new people!"
+        "bio_a": "Always up to play with new people!"
     }
 ]

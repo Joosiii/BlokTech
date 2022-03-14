@@ -12,13 +12,13 @@
 
     <main>
         <div id="profilenav">
-            <a id="hprof" href="#" onclick="HumanProfile();return false"><img src="images/icon_human.png" alt=""></a>
-            <a id="aprof" href="#" onclick="AnimalProfile();return false"><img src="images/icon_animal.png" alt=""></a>
+            <a id="hprof" href="#" onclick="HumanProfile();"><img src="images/icon_human.png" alt=""></a>
+            <a id="aprof" href="#" onclick="AnimalProfile();"><img src="images/icon_animal.png" alt=""></a>
         </div>
         <div id="humanprofile">
             <img id="previewpic" src="images/prevpic1.png" alt="">
 
-            <h2><%= profiles.name %></h2>
+            <h2 id="h2check"><%= profiles.name %></h2>
             <h3><%= profiles.age %> years old</h3>
             <p><%= profiles.bio %></p>
             <ul>
@@ -40,7 +40,7 @@
         <button type="button" onclick="location.href='/edit'">Edit Profile</button>
     </main>
 
-    <script src="js/script.js"></script>
+    <script src="js/profilescript.js"></script>
 </body>
 
 </html>
