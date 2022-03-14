@@ -3,7 +3,7 @@ const app = express();
 const dotenv = require('dotenv').config();
 const arrayify = require('array-back');
 
-const port = 4000;
+const port = 4000
 
 const {MongoClient} = require('mongodb');
 const {ObjectId} = require('mongodb');
