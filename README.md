@@ -45,7 +45,7 @@ De structuur van een document binnen mijn database ziet er als volgende uit:
 ```
 
 ## License
-Ik maak gebruik van de [MIT License](https://github.com/Joosiii/BlokTech/blob/master/LICENSE).
+Er wordt gebruik gemaakt van de [MIT License](https://github.com/Joosiii/BlokTech/blob/master/LICENSE).
 
 ----------------------
 Lees voor meer informatie verder in de [Wiki](https://github.com/Joosiii/BlokTech/wiki)!
