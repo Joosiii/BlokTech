@@ -5,12 +5,8 @@ const arrayify = require('array-back');
 
 const port = 4000;
 
-const {
-    MongoClient
-} = require('mongodb');
-const {
-    ObjectId
-} = require('mongodb');
+const {MongoClient} = require('mongodb');
+const {ObjectId} = require('mongodb');
 let db = null;
 
 const interests = ["Travel", "Dogs", "Cooking", "Surfing", "Politics", "Cats", "Fitness", "Reading", "Netflix", "Partying"];
@@ -26,15 +22,11 @@ app.set('view engine', 'ejs');
 //Main Routes
 app.get('/', (req, res) => {
     const title = "Home";
-    res.render('home', {
-        title
-    });
+    res.render('home', {title});
 })
 
 app.get('/profile', async (req, res) => {
-    const query = {
-        _id: ObjectId("622b3fdd4037835021a92579")
-    };
+    const query = {_id: ObjectId("622f16832581971024e7ad12")};
     const profiles = await db.collection('profiles').findOne(query);
 
     const title = "Profile Page";
@@ -52,7 +44,7 @@ app.post('/edit', async (req, res) => {
         age: req.body.age,
         bio: req.body.bio,
         interests: arrayify(req.body.interests),
-        name_a: req.body.name-a,
+        name_a: req.body.name_a,
         age_a: req.body.age_a,
         type_a: req.body.type_a,
         breed_a: req.body.breed_a,
@@ -70,8 +62,7 @@ app.post('/edit', async (req, res) => {
 
 // Error Page
 app.use((req, res, next) => {
-    res.status(404).send(
-        "<h1>Error: Page Not Found</h1>");
+    res.status(404).send("<h1>Error: Page Not Found</h1>");
 })
 
 //Connect to database
