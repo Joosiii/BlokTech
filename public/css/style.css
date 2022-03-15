@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
 
+/* Overall Page Styling */
+
 *,
 html {
     margin: 0;
@@ -7,7 +9,7 @@ html {
     box-sizing: border-box;
 }
 
-html {
+body {
     background-color: #b9ceff;
     font-family: 'Roboto', sans-serif;
 }
@@ -19,6 +21,7 @@ main {
 
 
 
+/* Header and Nav styling */
 
 header {
     text-align: center;
@@ -37,8 +40,6 @@ header,
 nav {
     position: sticky;
 }
-
-
 
 
 
@@ -68,6 +69,42 @@ nav ul img {
 
 
 
+/* Landing Page Styling */
+
+#index {
+    background-color: #253355;
+}
+
+#index main {
+    width: 100%;
+    margin-top: 40%;
+}
+
+#index img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+#index button {
+    display: block;
+    margin: auto;
+    margin-top: 1.5em;
+    width: 60%;
+    padding: 1em 2em;
+    background-color: white;
+    color: #253355;
+    border: none;
+    border-radius: 40px;
+    font-weight: 700;
+    font-family: 'Roboto',
+        sans-serif;
+    font-size: 14px;
+}
+
+
+
+/* Homepage Styling */
 
 h1 {
     font-weight: 900;
@@ -78,7 +115,25 @@ h1 {
     letter-spacing: 3px;
 }
 
+#homep {
+    margin-top: 0.5em;
+    padding: 1em;
+    font-weight: 300;
+    background-color: white;
+    border-radius: 25px;
+}
 
+#homepic {
+    margin-top: 0.5em;
+    width: 100%;
+    height: 325px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+
+
+/* Profile Page Styling */
 
 #profilenav,
 #profilenave {
@@ -110,7 +165,9 @@ h1 {
 #previewpic,
 #previewpic_a {
     display: block;
-    max-width: 292.5px;
+    width: 292.5px;
+    height: 292.5px;
+    object-fit: cover;
     margin: auto;
     padding: 0 0 1em 0;
 }
@@ -136,8 +193,21 @@ h1 {
     font-weight: 300;
 }
 
-#humanprofile p,
 #animalprofile p:first-of-type {
+    margin: 0 20px;
+    margin-top: 1em;
+    padding-top: 0.75em;
+    font-weight: 700;
+    font-size: 20px;
+    border-top: 1px solid black;
+}
+
+#animalprofile p:nth-of-type(2) {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#humanprofile p {
     margin: 0 20px;
     margin-top: 1em;
     padding-top: 0.75em;
@@ -180,6 +250,8 @@ button {
 }
 
 
+
+/* Make Profile & Edit Page Styling */
 
 form {
     display: flex;
@@ -242,16 +314,6 @@ input[type=checkbox] {
 
 fieldset label {
     font-weight: 400;
-}
-
-#pics {
-    display: flex;
-    justify-content: space-between;
-}
-
-img {
-    max-width: 90px;
-    border-radius: 25px;
 }
 
 input[type=submit] {
