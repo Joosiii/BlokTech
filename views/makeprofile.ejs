@@ -6,29 +6,29 @@
 </head>
 
 <body>
-    <%- include('includes/header'); -%>
-
-    <%- include('includes/nav'); -%>
+    <header>
+        <a href="/"><img src="images/logowhite.png" alt=""></a>
+    </header>
 
     <main>
-        <h1>Edit Profile</h1>
+        <h1>Make Profile</h1>
         <div id="profilenave">
             <a id="hprofe" href="#" onclick="HumanProfileEdit();"><img src="images/icon_human.png" alt=""></a>
             <a id="aprofe" href="#" onclick="AnimalProfileEdit();"><img src="images/icon_animal.png" alt=""></a>
         </div>
-        <form action="/edit" method="post">
+        <form action="/makeprofile" method="post">
             <div id="humanprofileedit">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" value="<%= profiles.name %>">
+                <input type="text" id="name" name="name">
                 <label for="age">Age</label>
-                <input type="text" id="age" name="age" value="<%= profiles.age %>">
+                <input type="text" id="age" name="age">
                 <label for="bio">Profile Biography</label>
-                <textarea name="bio" id="bio" cols="30" rows="5"><%= profiles.bio %></textarea>
+                <textarea name="bio" id="bio" cols="30" rows="5"></textarea>
                 <div id="int-list">
                     <fieldset>
                         <legend>Interests:</legend>
                         <% interests.forEach(function(interest){ %>
-                        <input type="checkbox" name="interests" value="<%= interest %>" id="<%= interest %>" checked>
+                        <input type="checkbox" name="interests" value="<%= interest %>" id="<%= interest %>">
                         <label for="<%= interest %>"><%= interest %></label><br>
                         <% }) %>
                     </fieldset>
@@ -36,19 +36,19 @@
                 <p>Upload Photo (Of you and your pet!)</p>
                 <input type="file" name="photo" id="photo" accept="image/png, image/jpeg, image/gif" onchange="loadFile(event)">
                 <img id="output" width="200">
-            </div> 
+            </div>
 
             <div id="animalprofileedit">
                 <label for="name_a">Name</label>
-                <input type="text" id="name_a" name="name_a" value="<%= profiles.name_a %>">
+                <input type="text" id="name_a" name="name_a">
                 <label for="age_a">Age</label>
-                <input type="text" id="age_a" name="age_a" value="<%= profiles.age_a %>">
+                <input type="text" id="age_a" name="age_a">
                 <label for="type_a">Animal Type</label>
-                <input type="text" id="type_a" name="type_a" value="<%= profiles.type_a %>">
+                <input type="text" id="type_a" name="type_a">
                 <label for="breed_a">Breed</label>
-                <input type="text" id="breed_a" name="breed_a" value="<%= profiles.breed_a %>">
+                <input type="text" id="breed_a" name="breed_a">
                 <label for="bio_a">Animal Biography</label>
-                <textarea name="bio_a" id="bio_a" cols="30" rows="5"><%= profiles.bio_a %></textarea>
+                <textarea name="bio_a" id="bio_a" cols="30" rows="5"></textarea>
             </div>
             <input type="submit" value="Opslaan">
         </form>

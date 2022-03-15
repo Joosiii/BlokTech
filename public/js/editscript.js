@@ -13,3 +13,8 @@ function AnimalProfileEdit() {
     divanimaledit.style.display = "block";
 }
 
+const loadFile = function(event) {
+	const image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+// Bron gebruikt: https://www.webtrickshome.com/forum/how-to-display-uploaded-image-in-html-using-javascript
