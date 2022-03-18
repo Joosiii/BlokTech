@@ -22,10 +22,12 @@
                 <input type="text" id="name" name="name" value="<%= profiles.name %>">
                 <label for="age">Age</label>
                 <input type="text" id="age" name="age" value="<%= profiles.age %>">
+                <label for="country">Country</label>
+                <select name="country" id="country"></select>
                 <label for="bio">Profile Biography</label>
                 <textarea name="bio" id="bio" cols="30" rows="5"><%= profiles.bio %></textarea>
                 <div id="int-list">
-                    <fieldset>
+                    <fieldset id="interestfieldset">
                         <legend>Interests:</legend>
                         <% interests.forEach(function(interest){ %>
                         <input type="checkbox" name="interests" value="<%= interest %>" id="<%= interest %>" checked>
@@ -35,7 +37,8 @@
                 </div>
                 <p>Upload Photo (Of you and your pet!)</p>
                 <input type="file" name="photo" id="photo" accept="image/png, image/jpeg, image/gif" onchange="loadFile(event)">
-                <img id="output" width="200">
+                <img id="previewphoto" width="292.5">
+                <!-- Bron gebruikt: https://www.webtrickshome.com/forum/how-to-display-uploaded-image-in-html-using-javascript -->
             </div> 
 
             <div id="animalprofileedit">
