@@ -9,7 +9,7 @@ const {ObjectId} = require('mongodb');
 //////////////////////
 // Define Variables //
 //////////////////////
-const port = "";
+const port = process.env.PORT || 4000;
 let db = null;
 const interests = ["Travel", "Dogs", "Cooking", "Surfing", "Politics", "Cats", "Fitness", "Reading", "Netflix", "Partying"];
 
