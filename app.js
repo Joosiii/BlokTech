@@ -50,6 +50,7 @@ app.post('/makeprofile', async (req, res) => {
     let profile = {
         name: req.body.name,
         age: req.body.age,
+        country: req.body.country,
         bio: req.body.bio,
         interests: arrayify(req.body.interests),
         name_a: req.body.name_a,
@@ -98,6 +99,7 @@ app.post('/edit', async (req, res) => {
     let profile = {
         name: req.body.name,
         age: req.body.age,
+        country: req.body.country,
         bio: req.body.bio,
         interests: arrayify(req.body.interests),
         name_a: req.body.name_a,

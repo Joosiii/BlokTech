@@ -2,6 +2,7 @@
     {
         "name": "",
         "age": "",
+        "country": "",
         "bio": "",
         "interests": "",
         "name_a": "",
@@ -13,6 +14,7 @@
     {
         "name": "Hans",
         "age": "28",
+        "country": "Netherlands",
         "bio": "Spontaneous and adventurous guy looking for a match!",
         "interests": ["Travel", "Dogs", "Cooking", "Politics", "Fitness"],
         "name_a": "Bello",

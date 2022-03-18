@@ -186,9 +186,10 @@ h1 {
     font-weight: 300;
 }
 
-#animalprofile p {
+#animalprofile p,
+#humanprofile p {
     margin: 0 20px;
-    margin-top: 1em;
+    margin-top: 0.5em;
     padding-top: 0.75em;
     font-weight: 300;
 }
@@ -207,7 +208,7 @@ h1 {
     padding-top: 0;
 }
 
-#humanprofile p {
+#humanprofile p:first-of-type {
     margin: 0 20px;
     margin-top: 1em;
     padding-top: 0.75em;
@@ -247,6 +248,7 @@ button {
     font-family: 'Roboto',
         sans-serif;
     font-size: 14px;
+    margin-bottom: 6em;
 }
 
 
@@ -328,4 +330,16 @@ input[type=submit] {
     font-weight: 700;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
+}
+
+#previewphoto {
+    margin-top: 0.5em;
+}
+
+select {
+    width: 100%;
+    margin-bottom: 1em;
+    border: none;
+    border-radius: 25px;
+    padding: 0.75em 1em;
 }

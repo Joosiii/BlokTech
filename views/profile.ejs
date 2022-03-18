@@ -20,8 +20,9 @@
 
             <h2 id="h2check"><%= profiles.name %></h2>
             <h3><%= profiles.age %> years old</h3>
+            <p id="selected"><%= profiles.country %></p>
             <p><%= profiles.bio %></p>
-            <ul>
+            <ul id="interestlist">
                 <% profiles.interests.forEach(function(item){ %>
                     <li><%= item %></li>
                     <% }) %>
