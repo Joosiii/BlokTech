@@ -14,7 +14,7 @@ function AnimalProfileEdit() {
 }
 
 const loadFile = function(event) {
-	const image = document.getElementById('preview');
+	const image = document.getElementById('previewphoto');
 	image.src = URL.createObjectURL(event.target.files[0]);
 };
 // Bron gebruikt: https://www.webtrickshome.com/forum/how-to-display-uploaded-image-in-html-using-javascript
