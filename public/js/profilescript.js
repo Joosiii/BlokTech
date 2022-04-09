@@ -1,20 +1,41 @@
-const divhuman = document.getElementById("humanprofile");
-const divanimal = document.getElementById("animalprofile");
+const humansection = document.querySelector("#humanprofile");
+const animalsection = document.querySelector("#animalprofile");
 
 // De functie van het menselijke profiel wordt uitgevoerd bij het opstarten van de pagina, aangezien deze laten zien moet worden
-HumanProfile();
+window.addEventListener("load", (e) => {
+    HumanProfile();
+    e.preventDefault();
+}, false);
+
+// Bij het klikken van de 'human' knop wordt de bijbehorende functie uitgevoerd
+document.querySelector("#humanbutton").addEventListener("click", (e) => {
+    HumanProfile();
+    e.preventDefault();
+}, false);
+
+// Bij het klikken van de 'human' knop wordt de bijbehorende functie uitgevoerd
+document.querySelector("#animalbutton").addEventListener("click", (e) => {
+    AnimalProfile();
+    e.preventDefault();
+}, false);
 
 // Binnen deze functie wordt het menselijke profiel weergegeven en wordt het dieren profiel verborgen door de display-style naar none te veranderen
 function HumanProfile() {
-    divhuman.style.display = "block";
-    divanimal.style.display = "none";
+    humansection.style.display = "block";
+    animalsection.style.display = "none";
+    document.querySelector("#humanbutton > img").classList.add("active");
+    document.querySelector("#animalbutton > img").classList.remove("active");
 }
 
 // Hier gebeurt dit ook, maar dan vice versa
 function AnimalProfile() {
-    divhuman.style.display = "none";
-    divanimal.style.display = "block";
+    humansection.style.display = "none";
+    animalsection.style.display = "block";
+    document.querySelector("#animalbutton > img").classList.add("active");
+    document.querySelector("#humanbutton > img").classList.remove("active");
 }
+
+document.querySelector("#profilepage").classList.add("active");
 
 // Er wordt gecheckt welk land door de gebruiker geselecteerd is bij het maken van het profiel, en deze wordt opgeslagen in de localStorage
 const selectedCountry = document.getElementById('selected').innerText;
@@ -36,3 +57,8 @@ Array.from(children).forEach(li => {
 // Vervolgens wordt deze array met alle geselecteerde list items in de localStorage opgeslagen, zodat deze in een ander JavaScript bestand opgehaald kan worden
 localStorage.setItem('myArray', JSON.stringify(interestarray));
 // Bron gebruikt: https://gist.github.com/nrojas13/68b79e21d0c81aa22ad762c9a4db38d0
+
+// Button wordt gelinkt met de edit pagina
+document.querySelector(".profilebutton").addEventListener("click", () => {
+    window.location.href = 'edit';
+})

@@ -1,25 +1,44 @@
-const divhumanedit = document.getElementById("humanprofileedit");
-const divanimaledit = document.getElementById("animalprofileedit");
+const humansection = document.querySelector("#humanprofileedit");
+const animalsection = document.querySelector("#animalprofileedit");
 
 // De functie van het menselijke profiel wordt uitgevoerd bij het opstarten van de pagina, aangezien deze laten zien moet worden
-HumanProfileEdit();
+window.addEventListener("load", (e) => {
+    HumanProfile();
+    e.preventDefault();
+}, false);
+
+// Bij het klikken van de 'human' knop wordt de bijbehorende functie uitgevoerd
+document.querySelector("#humanbutton").addEventListener("click", (e) => {
+    HumanProfile();
+    e.preventDefault();
+}, false);
+
+// Bij het klikken van de 'human' knop wordt de bijbehorende functie uitgevoerd
+document.querySelector("#animalbutton").addEventListener("click", (e) => {
+    AnimalProfile();
+    e.preventDefault();
+}, false);
 
 // Binnen deze functie wordt het menselijke profiel weergegeven en wordt het dieren profiel verborgen door de display-style naar none te veranderen
-function HumanProfileEdit() {
-    divhumanedit.style.display = "block";
-    divanimaledit.style.display = "none";
+function HumanProfile() {
+    humansection.style.display = "block";
+    animalsection.style.display = "none";
+    document.querySelector("#humanbutton > img").classList.add("active");
+    document.querySelector("#animalbutton > img").classList.remove("active");
 }
 
 // Hier gebeurt dit ook, maar dan vice versa
-function AnimalProfileEdit() {
-    divhumanedit.style.display = "none";
-    divanimaledit.style.display = "block";
+function AnimalProfile() {
+    humansection.style.display = "none";
+    animalsection.style.display = "block";
+    document.querySelector("#animalbutton > img").classList.add("active");
+    document.querySelector("#humanbutton > img").classList.remove("active");
 }
 
 // Bij het uploaden van een foto wordt deze functie uitgevoerd, waarmee de geüploade foto gelijk eronder weergegeven wordt
-const loadFile = function(event) {
-	const image = document.getElementById('previewphoto');
-	image.src = URL.createObjectURL(event.target.files[0]);
+const loadFile = function (event) {
+    const image = document.getElementById('previewphoto');
+    image.src = URL.createObjectURL(event.target.files[0]);
 };
 // Bron gebruikt: https://www.webtrickshome.com/forum/how-to-display-uploaded-image-in-html-using-javascript
 
@@ -37,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         countries.forEach(country => {
             output += `<option>${country.name}</option>`;
         });
-        
+
         // Vervolgens wordt deze output toegevoegd aan het select element, welke eerder uit de EJS pagina is opgehaald
         CountryDropdown.innerHTML = output;
     }).catch(err => {
