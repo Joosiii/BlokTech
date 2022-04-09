@@ -12,8 +12,8 @@
 
     <main>
         <div id="profilenav">
-            <a id="hprof" href="#" onclick="HumanProfile();"><img src="images/icon_human.png" alt=""></a>
-            <a id="aprof" href="#" onclick="AnimalProfile();"><img src="images/icon_animal.png" alt=""></a>
+            <a id="humanbutton" href="#"><img src="images/icon_human.png" alt=""></a>
+            <a id="animalbutton" href="#"><img src="images/icon_animal.png" alt=""></a>
         </div>
         <div id="humanprofile">
             <img id="previewpic" src="images/previewpic3.jpg" alt="">
@@ -37,8 +37,7 @@
             <p><%= profiles.breed_a %></p>  
             <p><%= profiles.bio_a %></p>        
         </div>
-
-        <button type="button" onclick="location.href='/edit'">Edit Profile</button>
+        <button type="button" class="profilebutton">Edit Profile</button>
     </main>
 
     <script src="js/profilescript.js"></script>

@@ -4,3 +4,5 @@ const homebutton = document.getElementById("homemessage");
 homebutton.addEventListener("click", () => {
     window.location.href = 'profile';
 })
+
+document.querySelector("#homepage").classList.add("active");

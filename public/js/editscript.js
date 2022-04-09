@@ -1,25 +1,46 @@
-const divhumanedit = document.getElementById("humanprofileedit");
-const divanimaledit = document.getElementById("animalprofileedit");
+const humansection = document.querySelector("#humanprofileedit");
+const animalsection = document.querySelector("#animalprofileedit");
 
 // De functie van het menselijke profiel wordt uitgevoerd bij het opstarten van de pagina, aangezien deze laten zien moet worden
-HumanProfileEdit();
+window.addEventListener("load", (e) => {
+    HumanProfile();
+    e.preventDefault();
+}, false);
+
+// Bij het klikken van de 'human' knop wordt de bijbehorende functie uitgevoerd
+document.querySelector("#humanbutton").addEventListener("click", (e) => {
+    HumanProfile();
+    e.preventDefault();
+}, false);
+
+// Bij het klikken van de 'human' knop wordt de bijbehorende functie uitgevoerd
+document.querySelector("#animalbutton").addEventListener("click", (e) => {
+    AnimalProfile();
+    e.preventDefault();
+}, false);
 
 // Binnen deze functie wordt het menselijke profiel weergegeven en wordt het dieren profiel verborgen door de display-style naar none te veranderen
-function HumanProfileEdit() {
-    divhumanedit.style.display = "block";
-    divanimaledit.style.display = "none";
+function HumanProfile() {
+    humansection.style.display = "block";
+    animalsection.style.display = "none";
+    document.querySelector("#humanbutton > img").classList.add("active");
+    document.querySelector("#animalbutton > img").classList.remove("active");
 }
 
 // Hier gebeurt dit ook, maar dan vice versa
-function AnimalProfileEdit() {
-    divhumanedit.style.display = "none";
-    divanimaledit.style.display = "block";
+function AnimalProfile() {
+    humansection.style.display = "none";
+    animalsection.style.display = "block";
+    document.querySelector("#animalbutton > img").classList.add("active");
+    document.querySelector("#humanbutton > img").classList.remove("active");
 }
 
+document.querySelector("#profilepage").classList.add("active");
+
 // Bij het uploaden van een foto wordt deze functie uitgevoerd, waarmee de geüploade foto gelijk eronder weergegeven wordt
-const loadFile = function(event) {
-	const image = document.getElementById('previewphoto');
-	image.src = URL.createObjectURL(event.target.files[0]);
+const loadFile = function (event) {
+    const image = document.getElementById('previewphoto');
+    image.src = URL.createObjectURL(event.target.files[0]);
 };
 // Bron gebruikt: https://www.webtrickshome.com/forum/how-to-display-uploaded-image-in-html-using-javascript
 
@@ -66,15 +87,10 @@ const interests = ["Travel", "Dogs", "Cooking", "Surfing", "Politics", "Cats", "
 // localStorage gehaalde array, wanneer dit het geval is wordt het checked element van de betreffende interesse op true gezet
 interests.forEach((i) => {
     if (interestarray.includes(i) == true) {
-    document.getElementById(i).checked = true;
+        document.getElementById(i).checked = true;
     } else {
-    document.getElementById(i).checked = false;
+        document.getElementById(i).checked = false;
     }
 });
 
 // Bron gebruikt: https://www.w3schools.com/jsref/jsref_includes_array.asp
-
-
-
-
-

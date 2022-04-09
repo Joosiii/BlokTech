@@ -65,6 +65,11 @@ nav ul {
 nav ul img {
     max-height: 35px;
     max-width: 35px;
+    opacity: 0.5;
+}
+
+.active {
+    opacity: 1 !important;
 }
 
 
@@ -150,6 +155,7 @@ h1 {
 #profilenav img,
 #profilenave img {
     max-height: 25px;
+    opacity: 0.5;
 }
 
 #humanprofile,
