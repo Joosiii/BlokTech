@@ -11,11 +11,11 @@
     <%- include('includes/nav'); -%>
 
     <main>
-        <div id="profilenav">
+        <section id="profilenav">
             <a id="humanbutton" href="#"><img src="images/icon_human.png" alt=""></a>
             <a id="animalbutton" href="#"><img src="images/icon_animal.png" alt=""></a>
-        </div>
-        <div id="humanprofile">
+        </section>
+        <section id="humanprofile">
             <img id="previewpic" src="images/previewpic3.jpg" alt="">
 
             <h2 id="h2check"><%= profiles.name %></h2>
@@ -27,8 +27,8 @@
                     <li><%= item %></li>
                     <% }) %>
             </ul>
-        </div>
-        <div id="animalprofile">
+        </section>
+        <section id="animalprofile">
             <img id="previewpic_a" src="images/previewpic3.jpg" alt="">
 
             <h2><%= profiles.name_a %></h2>
@@ -36,7 +36,7 @@
             <p><%= profiles.type_a %></p>  
             <p><%= profiles.breed_a %></p>  
             <p><%= profiles.bio_a %></p>        
-        </div>
+        </section>
         <button type="button" class="profilebutton">Edit Profile</button>
     </main>
 

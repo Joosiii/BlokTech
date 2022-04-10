@@ -12,18 +12,21 @@
 
     <main>
         <h1>Make Profile</h1>
-        <div id="profilenave">
+        <section id="profilenave">
             <a id="humanbutton" href="#"><img src="images/icon_human.png" alt=""></a>
             <a id="animalbutton" href="#"><img src="images/icon_animal.png" alt=""></a>
-        </div>
+        </section>
         <form action="/makeprofile" method="post">
-            <div id="humanprofileedit">
+            <section id="humanprofileedit">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name">
                 <label for="age">Age</label>
                 <input type="text" id="age" name="age">
                 <label for="country">Country</label>
                 <select name="country" id="country"></select>
+                <noscript>
+                    <input type="text" id="countrynojs" name="country">
+                </noscript>
                 <label for="bio">Profile Biography</label>
                 <textarea name="bio" id="bio" cols="30" rows="5"></textarea>
                 <div id="int-list">
@@ -39,9 +42,9 @@
                 <input type="file" name="photo" id="photo" accept="image/png, image/jpeg, image/gif" onchange="loadFile(event)">
                 <img id="previewphoto" width="292.5">
                 <!-- Bron gebruikt: https://www.webtrickshome.com/forum/how-to-display-uploaded-image-in-html-using-javascript -->
-            </div>
+            </section>
 
-            <div id="animalprofileedit">
+            <section id="animalprofileedit">
                 <label for="name_a">Name</label>
                 <input type="text" id="name_a" name="name_a">
                 <label for="age_a">Age</label>
@@ -52,7 +55,7 @@
                 <input type="text" id="breed_a" name="breed_a">
                 <label for="bio_a">Animal Biography</label>
                 <textarea name="bio_a" id="bio_a" cols="30" rows="5"></textarea>
-            </div>
+            </section>
             <input type="submit" value="Opslaan">
         </form>
     </main>
