@@ -3,8 +3,12 @@ const app = express();
 const dotenv = require('dotenv').config();
 const arrayify = require('array-back');
 const multer = require('multer');
-const {MongoClient} = require('mongodb');
-const {ObjectId} = require('mongodb');
+const {
+    MongoClient
+} = require('mongodb');
+const {
+    ObjectId
+} = require('mongodb');
 
 //////////////////////
 // Define Variables //
@@ -18,7 +22,9 @@ const interests = ["Travel", "Dogs", "Cooking", "Surfing", "Politics", "Cats", "
 //////////////////
 app.use(express.static('public'));
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({
+    extended: true
+}));
 
 ///////////////////////////
 // Set Templating Engine //
@@ -35,13 +41,18 @@ app.get('/', (req, res) => {
     db.collection('profiles').deleteMany({});
 
     const title = "Match-A-Pet";
-    res.render('index', {title});
+    res.render('index', {
+        title
+    });
 })
 
 // De pagina voor het aanmaken van het profiel
 app.get('/makeprofile', (req, res) => {
     const title = "Make Profile";
-    res.render('makeprofile', {title, interests});
+    res.render('makeprofile', {
+        title,
+        interests
+    });
 })
 
 // Met deze post route wordt het formulier dat door de gebruiker is ingevuld verstuurd naar de database
@@ -59,20 +70,25 @@ app.post('/makeprofile', async (req, res) => {
         breed_a: req.body.breed_a,
         bio_a: req.body.bio_a
     };
-    
+
     // Vervolgens wordt door middel van het inserten van deze variabele het profiel opgeslagen in de database
     await db.collection('profiles').insertOne(profile);
 
     const profiles = await db.collection('profiles').findOne();
 
     const title = "Succesfully Made Profile Page!";
-    res.render('home', {title, profiles});
+    res.render('home', {
+        title,
+        profiles
+    });
 })
 
 // De route voor de homepagina
 app.get('/home', (req, res) => {
     const title = "Home";
-    res.render('home', {title});
+    res.render('home', {
+        title
+    });
 })
 
 // De route voor de profielpagina
@@ -81,7 +97,10 @@ app.get('/profile', async (req, res) => {
     const profiles = await db.collection('profiles').findOne();
 
     const title = "Profile Page";
-    res.render('profile', {title, profiles});
+    res.render('profile', {
+        title,
+        profiles
+    });
 })
 
 // De route voor de editpagina
@@ -90,7 +109,11 @@ app.get('/edit', async (req, res) => {
     const profiles = await db.collection('profiles').findOne();
 
     const title = "Profile Editor";
-    res.render('edit', {title, profiles, interests});
+    res.render('edit', {
+        title,
+        profiles,
+        interests
+    });
 })
 
 // Met deze post route wordt het bewerkte profiel verstuurd naar de database
@@ -117,7 +140,10 @@ app.post('/edit', async (req, res) => {
     const profiles = await db.collection('profiles').findOne();
 
     const title = "Succesfully Edited Profile Page!";
-    res.render('profile', {title, profiles});
+    res.render('profile', {
+        title,
+        profiles
+    });
 })
 
 
@@ -129,7 +155,9 @@ app.post('/edit', async (req, res) => {
 app.use((req, res, next) => {
     console.log("Error 404");
     const title = "Error 404";
-    res.status(404).render('404', {title});
+    res.status(404).render('404', {
+        title
+    });
 })
 
 /////////////////////////
