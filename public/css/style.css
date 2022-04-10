@@ -31,7 +31,7 @@ header {
 }
 
 header img {
-    height: 30px;
+    height: 1.875em;
 }
 
 
@@ -63,8 +63,8 @@ nav ul {
 }
 
 nav ul img {
-    max-height: 35px;
-    max-width: 35px;
+    max-height: 2.18em;
+    max-width: 2.18em;
     opacity: 0.5;
 }
 
@@ -100,7 +100,7 @@ nav ul img {
     background-color: white;
     color: #253355;
     border: none;
-    border-radius: 40px;
+    border-radius: 2.5em;
     font-weight: 700;
     font-family: 'Roboto',
         sans-serif;
@@ -117,7 +117,7 @@ h1 {
     margin-top: 0.75em;
     color: #253355;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 0.1875em;
 }
 
 #homep {
@@ -131,8 +131,8 @@ h1 {
 #homepic {
     margin-top: 0.5em;
     width: 100%;
-    height: 325px;
-    border-radius: 25px;
+    height: 20.25em;
+    border-radius: 1.55em;
     object-fit: cover;
 }
 
@@ -154,25 +154,25 @@ h1 {
 
 #profilenav img,
 #profilenave img {
-    max-height: 25px;
+    max-height: 1.55em;
     opacity: 0.5;
 }
 
 #humanprofile,
 #animalprofile {
     margin: auto;
-    max-width: 292.5px;
+    max-width: 18.25em;
     background-color: white;
     margin-top: 1em;
-    border-radius: 40px;
+    border-radius: 2.5em;
     padding-bottom: 2em;
 }
 
 #previewpic,
 #previewpic_a {
     display: block;
-    width: 292.5px;
-    height: 292.5px;
+    width: 18.25em;
+    height: 18.25em;
     object-fit: cover;
     margin: auto;
     padding: 0 0 1em 0;
@@ -180,13 +180,13 @@ h1 {
 
 #humanprofile h2,
 #animalprofile h2 {
-    margin-left: 20px;
-    font-size: 30px;
+    margin-left: calc(1em*(2/3));
+    font-size: 1.875em;
 }
 
 #humanprofile h3,
 #animalprofile h3 {
-    margin-left: 20px;
+     margin-left: calc(1em*(1.25/1.17));
     margin-top: 0.25em;
     font-style: italic;
     font-weight: 300;
@@ -194,18 +194,18 @@ h1 {
 
 #animalprofile p,
 #humanprofile p {
-    margin: 0 20px;
+    margin: 0 1.25em;
     margin-top: 0.5em;
     padding-top: 0.75em;
     font-weight: 300;
 }
 
 #animalprofile p:first-of-type {
-    margin: 0 20px;
-    margin-top: 1em;
+    margin: 0 1em;
+    margin-top: 0.8em;
     padding-top: 0.75em;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1.25em;
     border-top: 1px solid black;
 }
 
@@ -215,7 +215,7 @@ h1 {
 }
 
 #humanprofile p:first-of-type {
-    margin: 0 20px;
+    margin: 0 1.25em;
     margin-top: 1em;
     padding-top: 0.75em;
     font-weight: 300;
@@ -223,7 +223,7 @@ h1 {
 }
 
 #humanprofile ul {
-    margin: 0 20px;
+    margin: 0 1.25em;
     margin-top: 1em;
     list-style: none;
     display: grid;
@@ -234,9 +234,9 @@ h1 {
 #humanprofile li {
     padding: 0.5em;
     background-color: rgb(220, 220, 220);
-    font-size: 12px;
+    font-size: 0.75em;
     font-weight: 400;
-    border-radius: 20px;
+    border-radius: 1.25em;
     text-align: center;
 }
 
@@ -249,11 +249,11 @@ button {
     background-color: #a50407;
     color: white;
     border: none;
-    border-radius: 40px;
+    border-radius: 2.5em;
     font-weight: 700;
     font-family: 'Roboto',
         sans-serif;
-    font-size: 14px;
+    font-size: 0.875em;
     margin-bottom: 6em;
 }
 
@@ -279,7 +279,7 @@ input[type=text] {
     width: 100%;
     background-color: white;
     border: none;
-    border-radius: 40px;
+    border-radius: 2.5em;
     margin-bottom: 1em;
     padding: 0.75em 1em;
     font-family: 'Roboto', sans-serif;
@@ -289,7 +289,7 @@ textarea {
     width: 100%;
     background-color: white;
     border: none;
-    border-radius: 25px;
+    border-radius: 1.55em;
     margin-bottom: 1em;
     padding: 0.5em 1em;
     font-family: 'Roboto',
@@ -306,7 +306,7 @@ fieldset {
     padding: 0.5em 1em;
     background-color: white;
     border: none;
-    border-radius: 25px;
+    border-radius: 1.55em;
 }
 
 legend {
@@ -332,10 +332,10 @@ input[type=submit] {
     background-color: #a50407;
     color: white;
     border: none;
-    border-radius: 40px;
+    border-radius: 2.5em;
     font-weight: 700;
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 0.875em;
 }
 
 #previewphoto {
@@ -346,6 +346,6 @@ select {
     width: 100%;
     margin-bottom: 1em;
     border: none;
-    border-radius: 25px;
+    border-radius: 1.55em;
     padding: 0.75em 1em;
 }
